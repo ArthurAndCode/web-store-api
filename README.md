@@ -14,12 +14,24 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 | Method | Url | Description | Sample Valid Request Body |
 | ------ | --- | ----------- | ------------------------- |
 | GET    | /api/v1/users | Get all users | |
-| GET    | /api/v1/users/{id} | Get user by his id | |
-| GET    | /api/v1/users/by-email/{email} | Get user by his e-mail | |
+| GET    | /api/v1/users/{id} | Get user by id | |
+| GET    | /api/v1/users/by-email/{email} | Get user by e-mail | |
 | POST   | api/v1/users | Add user | [JSON](#usercreate) |
 | POST   | /api/v1/users/login | Login user | [JSON](#userlogin) |
 | PUT    | /api/v1/users/{id} | Edit user | [JSON](#userupdate) |
 | DELETE | /api/v1/users/{id} | Delete user | |
+
+## Products
+
+| Method | Url | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| GET    | /api/v1/products | Get all products | |
+| GET    | /api/v1/products{id} | Get product by id | |
+| GET    | /api/v1/products/by-category/{id} | Get products by category id | |
+| GET    | /api/v1/products/by-name/{name} | Get product by name | |
+| POST   | /api/v1/products | Add product | [JSON](#productcreate) |
+| PUT    | /api/v1/products{id} | Edit product | [JSON](#usercreate) |
+| DELETE | /api/v1/products/{id} | Delete product | |
 
 ## Sample Valid JSON Request Bodys
 
@@ -45,6 +57,18 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 {
     "email": "john.doe@example.com",
     "password": "securepassword"
+}
+```
+##### <a id="productcreate">Add product -> api/v1/products</a>
+##### <a>Edit product -> /api/v1/products{id}</a>
+```json
+{
+    "name": "Cordless Power Drill",
+    "description": "High-performance 18V cordless power drill with multiple speed settings and LED work light",
+    "price": 89.99,
+    "category": {
+        "id": 1
+    }
 }
 ```
 
