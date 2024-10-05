@@ -18,7 +18,7 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 | GET    | /api/v1/users/by-email/{email} | Get user by e-mail | |
 | POST   | api/v1/users | Add user | [JSON](#usercreate) |
 | POST   | /api/v1/users/login | Login user | [JSON](#userlogin) |
-| PUT    | /api/v1/users/{id} | Edit user | [JSON](#userupdate) |
+| PUT    | /api/v1/users/{id} | Edit user | [JSON](#usercreate) |
 | DELETE | /api/v1/users/{id} | Delete user | |
 
 ## Products
@@ -36,7 +36,8 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 ## Sample Valid JSON Request Bodys
 
 ##### <a id="usercreate">Add user -> /api/v1/users</a>
-#####  <a id="userupdate">Edit user -> /api/v1/users</a>
+##### <a>Edit user -> /api/v1/users/{id}</a>
+
 ```json
 {
     "email": "john.doe@example.com",
@@ -61,6 +62,7 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 ```
 ##### <a id="productcreate">Add product -> api/v1/products</a>
 ##### <a>Edit product -> /api/v1/products{id}</a>
+
 ```json
 {
     "name": "Cordless Power Drill",
