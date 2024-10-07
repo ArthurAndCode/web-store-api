@@ -48,7 +48,7 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 | GET    | /api/v1/products/categories | Get all categories | |
 | GET    | /api/v1/products/categories/{id} | Get category by id | |
 | POST   | /api/v1/products/categories | Add category | [JSON](#categorycreate) |
-| PUT    | /api/v1/products/categories/{id} | Edit category | [JSON](categorycreate) |
+| PUT    | /api/v1/products/categories/{id} | Edit category | [JSON](#categorycreate) |
 | DELETE | /api/v1/products/categories/{id} | Delete category | |
 
 ## Carts
@@ -71,7 +71,7 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 | GET    | /api/v1/orders/users/{id} | Get orders by user id | |
 | GET    | /api/v1/orders/details/{id} | Get order details by order id | |
 | POST   | /api/v1/orders/users/{id} | Create order by user id | |
-| PUT    | /api/v1/orders/{id} | Update order status by order id | [JSON](orderupdate) |
+| PUT    | /api/v1/orders/{id} | Update order status by order id | [JSON](#orderupdate) |
 | DELETE | /api/v1/orders/{id} | Delete order by order id |
 
 ## Sample Valid JSON Request Bodys
