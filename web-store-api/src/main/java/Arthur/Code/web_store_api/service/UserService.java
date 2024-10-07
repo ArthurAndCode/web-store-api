@@ -1,6 +1,6 @@
 package Arthur.Code.web_store_api.service;
 
-import Arthur.Code.web_store_api.data.UserRepository;
+import Arthur.Code.web_store_api.repository.UserRepository;
 import Arthur.Code.web_store_api.dto.LoginRequest;
 import Arthur.Code.web_store_api.dto.UserDTO;
 import Arthur.Code.web_store_api.model.User;

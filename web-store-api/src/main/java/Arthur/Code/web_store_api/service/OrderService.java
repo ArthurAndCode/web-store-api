@@ -1,7 +1,7 @@
 package Arthur.Code.web_store_api.service;
 
-import Arthur.Code.web_store_api.data.OrderItemRepository;
-import Arthur.Code.web_store_api.data.OrderRepository;
+import Arthur.Code.web_store_api.repository.OrderItemRepository;
+import Arthur.Code.web_store_api.repository.OrderRepository;
 import Arthur.Code.web_store_api.dto.OrderDTO;
 import Arthur.Code.web_store_api.dto.UserDTO;
 import Arthur.Code.web_store_api.model.Cart;

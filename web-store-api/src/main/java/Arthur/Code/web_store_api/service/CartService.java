@@ -1,7 +1,7 @@
 package Arthur.Code.web_store_api.service;
 
-import Arthur.Code.web_store_api.data.CartRepository;
-import Arthur.Code.web_store_api.data.ProductRepository;
+import Arthur.Code.web_store_api.repository.CartRepository;
+import Arthur.Code.web_store_api.repository.ProductRepository;
 import Arthur.Code.web_store_api.model.Cart;
 import Arthur.Code.web_store_api.model.Product;
 import org.springframework.stereotype.Service;

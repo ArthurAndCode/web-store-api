@@ -1,4 +1,4 @@
-package Arthur.Code.web_store_api.data;
+package Arthur.Code.web_store_api.repository;
 
 import Arthur.Code.web_store_api.model.OrderItem;
 import org.springframework.data.jpa.repository.JpaRepository;

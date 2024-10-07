@@ -1,7 +1,7 @@
 package Arthur.Code.web_store_api.service;
 
-import Arthur.Code.web_store_api.data.AddressRepository;
-import Arthur.Code.web_store_api.data.UserRepository;
+import Arthur.Code.web_store_api.repository.AddressRepository;
+import Arthur.Code.web_store_api.repository.UserRepository;
 import Arthur.Code.web_store_api.model.Address;
 import Arthur.Code.web_store_api.model.User;
 import org.springframework.stereotype.Service;
