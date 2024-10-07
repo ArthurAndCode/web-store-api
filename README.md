@@ -38,7 +38,7 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 | GET    | /api/v1/products/by-category/{id} | Get products by category id | |
 | GET    | /api/v1/products/by-name/{name} | Get product by name | |
 | POST   | /api/v1/products | Add product | [JSON](#productcreate) |
-| PUT    | /api/v1/products/{id} | Edit product | [JSON](#usercreate) |
+| PUT    | /api/v1/products/{id} | Edit product | [JSON](#productcreate) |
 | DELETE | /api/v1/products/{id} | Delete product | |
 
 ## Categories
