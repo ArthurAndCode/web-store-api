@@ -21,6 +21,14 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 | PUT    | /api/v1/users/{id} | Edit user | [JSON](#usercreate) |
 | DELETE | /api/v1/users/{id} | Delete user | |
 
+## Addresses
+
+| Method | Url | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| POST   | /api/v1/users/{id}/addresses | Add address to user | [JSON](#addresscreate) |
+| PUT    | /api/v1/users/{id}/addresses | Update user address | [JSON](#addresscreate) |
+| DELETE | /api/v1/users/{id}/addresses | Delete address | |
+
 ## Products
 
 | Method | Url | Description | Sample Valid Request Body |
@@ -30,8 +38,41 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 | GET    | /api/v1/products/by-category/{id} | Get products by category id | |
 | GET    | /api/v1/products/by-name/{name} | Get product by name | |
 | POST   | /api/v1/products | Add product | [JSON](#productcreate) |
-| PUT    | /api/v1/products{id} | Edit product | [JSON](#usercreate) |
+| PUT    | /api/v1/products/{id} | Edit product | [JSON](#usercreate) |
 | DELETE | /api/v1/products/{id} | Delete product | |
+
+## Categories
+
+| Method | Url | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| GET    | /api/v1/products/categories | Get all categories | |
+| GET    | /api/v1/products/categories/{id} | Get category by id | |
+| POST   | /api/v1/products/categories | Add category | [JSON](#categorycreate) |
+| PUT    | /api/v1/products/categories/{id} | Edit category | [JSON](categorycreate) |
+| DELETE | /api/v1/products/categories/{id} | Delete category | |
+
+## Carts
+
+| Method | Url | Description |
+| ------ | --- | ----------- |
+| GET    | /api/v1/users/{id}/carts | Get cart by user id |
+| GET    | /api/v1/products/categories/{id} | Get category by id |
+| POST   | /api/v1/users/{id}/carts/products/{id} | Add product to cart by user id and product id |
+| DELETE | /api/v1/users/{id}/carts/products/{id} | Remove product from cart by user id and product id |
+| DELETE | /api/v1/users/{id}/carts | Clear cart by user id |
+
+## Orders
+
+| Method | Url | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| GET    | /api/v1/orders | Get all orders | |
+| GET    | /api/v1/orders/completed | Get all completed orders | |
+| GET    | /api/v1/orders/paid | Get all paid orders | |
+| GET    | /api/v1/orders/users/{id} | Get orders by user id | |
+| GET    | /api/v1/orders/details/{id} | Get order details by order id | |
+| POST   | /api/v1/orders/users/{id} | Create order by user id | |
+| PUT    | /api/v1/orders/{id} | Update order status by order id | [JSON](orderupdate) |
+| DELETE | /api/v1/orders/{id} | Delete order by order id |
 
 ## Sample Valid JSON Request Bodys
 
@@ -54,14 +95,26 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
 }
 ```
 ##### <a id="userlogin">Login user -> /api/v1/users/login</a>
+
 ```json
 {
     "email": "john.doe@example.com",
     "password": "securepassword"
 }
 ```
+##### <a id="addresscreate">Add address to user -> /api/v1/users/{id}/addresses</a>
+##### <a>Update address -> /api/v1/users/{id}/addresses</a>
+
+```json
+{
+    "street": "1600 Pennsylvania Avenue NW",
+    "city": "Washington",
+    "postalCode": "20500",
+    "country": "USA"
+}
+```
 ##### <a id="productcreate">Add product -> api/v1/products</a>
-##### <a>Edit product -> /api/v1/products{id}</a>
+##### <a>Edit product -> /api/v1/products/{id}</a>
 
 ```json
 {
@@ -73,4 +126,22 @@ RESTful CRUD API designed for managing an online store. Built using Java Spring 
     }
 }
 ```
+##### <a id="categorycreate">Add category -> /api/v1/products/categories</a>
+##### <a>Edit category -> /api/v1/products/categories/{id}</a>
+
+```json
+{
+    "name": "Crafted Woodwork Essentials",
+    "description": "High-quality wooden materials for precision carpentry and creative woodworking projects."
+}
+
+```
+##### <a id="orderupdate"> Update order status by order id -> /api/v1/orders/{id}</a>
+```json
+{
+    "orderStatus": "COMPLETED",
+    "paymentStatus": "PAID"
+}
+```
+
 
